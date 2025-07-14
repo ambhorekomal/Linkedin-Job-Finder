@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Summarizer - SaaSquatch Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <h1>LinkedIn Job Summarizer</h1>
+        <p>Get quick summaries of job postings using AI</p>
+        <form method="POST">
+            <input type="text" name="keyword" placeholder="Job Keyword" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <button type="submit">Fetch Jobs</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results - Job Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Results for "{{ keyword }}" in "{{ location }}"</h1>
+    {% for res in results %}
+    <div class="card">
+        <a href="{{ res.link }}" target="_blank">{{ res.link }}</a>
+        <p>{{ res.summary }}</p>
+    </div>
+    {% endfor %}
+    <a href="/">Back to Search</a>
+</body>
+</html>
